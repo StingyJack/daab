@@ -21,8 +21,12 @@ namespace Microsoft.Practices.EnterpriseLibrary.Data.Configuration
     /// <list type="bullet">
     /// <item>For provider name "System.Data.SqlClient", or for a provider of type <see cref="System.Data.SqlClient.SqlClientFactory"/>, the 
     /// <see cref="Microsoft.Practices.EnterpriseLibrary.Data.Sql.SqlDatabase"/> will be used.</item>
+#pragma warning disable 618
     /// <item>For provider name "System.Data.OracleClient", or for a provider of type <see cref="System.Data.OracleClient.OracleClientFactory"/>, the 
+#pragma warning restore 618
+#pragma warning disable 618
     /// <see cref="Microsoft.Practices.EnterpriseLibrary.Data.Oracle.OracleDatabase"/> will be used.</item>
+#pragma warning restore 618
     /// <item>In any other case, the <see cref="GenericDatabase"/> will be used.</item>
     /// </list>
     /// </para>
@@ -107,6 +111,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Data.Configuration
             get { return Name; }
         }
 
+        // ReSharper disable RedundantOverriddenMember
         /// <summary/>
         // TODO : make this a designtime converter. normal converter gets in the wat of system.configuration
         //[TypeConverter("Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ComponentModel.Converters.SystemDataProviderConverter,  Microsoft.Practices.EnterpriseLibrary.Configuration.Design")]
@@ -115,5 +120,6 @@ namespace Microsoft.Practices.EnterpriseLibrary.Data.Configuration
             get{ return base.Name; }
             set{ base.Name = value; }
         }
+        // ReSharper restore RedundantOverriddenMember
     }
 }

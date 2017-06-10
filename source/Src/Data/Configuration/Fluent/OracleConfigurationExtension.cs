@@ -21,7 +21,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent
         IDatabaseOracleConfiguration WithConnectionString(string connectionString);
 
         /// <summary>
+#pragma warning disable 618
         /// Define an Oracle connection with the <see cref="OracleConnectionStringBuilder"/>
+#pragma warning restore 618
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>

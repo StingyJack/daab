@@ -9,7 +9,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Data.Oracle
     /// <see cref="IOraclePackage"/> is used to specify how to transform store procedure names 
     /// into package qualified Oracle stored procedure names.
     /// </remarks>
+#pragma warning disable 618
     /// <seealso cref="OracleDatabase"/>
+#pragma warning restore 618
     public interface IOraclePackage
     {
         /// <summary>

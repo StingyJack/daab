@@ -10,7 +10,9 @@ using Microsoft.Practices.EnterpriseLibrary.Data.Configuration;
 namespace Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration
 {
     /// <summary>
+#pragma warning disable 618
     /// Describes a <see cref="OracleDatabase"/> instance, aggregating information from a 
+#pragma warning restore 618
     /// <see cref="ConnectionStringSettings"/> and any Oracle-specific database information.
     /// </summary>
     public class OracleDatabaseData : DatabaseData

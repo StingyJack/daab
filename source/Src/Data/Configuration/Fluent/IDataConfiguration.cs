@@ -40,7 +40,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent
         /// <returns></returns>
         /// <seealso cref="GenericDatabase"/>
         /// <seealso cref="SqlDatabase" />
+#pragma warning disable 618
         /// <seealso cref="OracleDatabase" />
+#pragma warning restore 618
         IDataConfiguration MappedToDatabase(Type databaseType);
 
         /// <summary>
@@ -50,7 +52,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent
         /// <returns></returns>
         /// <seealso cref="GenericDatabase"/>
         /// <seealso cref="SqlDatabase" />
+#pragma warning disable 618
         /// <seealso cref="OracleDatabase" />
+#pragma warning restore 618
         IDataConfiguration MappedToDatabase<T>() where T : Data.Database;
     }
 }
